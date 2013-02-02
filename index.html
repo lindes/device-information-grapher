@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Device Information Grapher</title>
+
+    <script src="ico/raphael-2.1.0-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="ico/ico-es5-json2-min.js" type="text/javascript" charset="utf-8"></script>    
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+
+  </head>
+
+  <body>
+
+    <h1>Grapher thing</h1>
+
+    <dl class="info">
+      <dt>Battery information</dt>
+      <dd><span id="bat_status"/></dd>
+
+      <dt>Battery Status</dt>
+      <dd><span id="bat_latest"/>[Loading...]</dd>
+
+      <dt>Connection</dt>
+      <dd><span id="con_status"/></dd>
+
+      <dt>Connection Status</dt>
+      <dd><span id="con_latest">[Loading...]</dd>
+
+    </dl>
+
+<!--
+    <canvas id="batteryGraph" width="100" height="200">
+      Sorry, your browser does not support
+      the <a href="http://en.wikipedia.org/wiki/HTML5">HTML5</a> <a href="http://en.wikipedia.org/wiki/Canvas_element">canvas
+        element</a>.
+    </canvas>
+-->
+
+    <div class="graphContainer">
+      <!-- <div id="bulletgraph0"></div> -->
+      A bullet graph:<span id="bulletgraph0"
+      class="bulletgraph"></span>.
+      <div class="clear"/>
+      <div id="graph0" class="rightGraph"></div>
+    </div>
+
+    <script src="graphit.js" type="text/javascript" charset="utf-8"></script>
+
+  </body>
+</html>
