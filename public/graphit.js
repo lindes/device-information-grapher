@@ -3,6 +3,13 @@ var connection = navigator.connection || navigator.mozConnection || navigator.we
 
 var batteryInfoArray = new Array();
 
+var battery_bullet = new Ico.BulletGraph( "battery-bullet", 0,
+                         { min: 0, max: 100, target: 25,
+                           graph_background: { key_values: [50, 75], key_colors: ['#f88','#ff8','#8f8'], colors_transition: 30 }
+                         }
+                       );
+
+
 function updateGraphs() {
     new Ico.BulletGraph( "bulletgraph0", 85,
                          { min: 0, max: 100, target: 65,
@@ -27,6 +34,14 @@ function updateGraphs() {
 function updateInfo()
 {
     batteryInfoArray.push([new Date(), battery.charging, battery.level, battery.chargingTime, battery.dischargingTime]);
+
+    var data = batteryInfoArray.map(function (item) { item[2] * 100 });
+    data = [99, 100, 80, 30, 10, 30, 90];
+
+    battery_bullet.data_samples =  battery.level * 100;
+
+
+    new Ico.SparkLine("battery-sparkline", data, { highlight: true } );
 
     document.getElementById("bat_latest").innerHTML =
         "charging: " + battery.charging
