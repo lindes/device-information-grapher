@@ -5,6 +5,6 @@ A project from
 
 By [David Lindes](http://www.daveltd.com/).
 
-## Dependencies:
+## Uses:
 
-* https://github.com/uiteoi/ico
+* https://google-developers.appspot.com/chart/

@@ -3,19 +3,32 @@
   <head>
     <title>Device Information Grapher</title>
 
-    <script src="js/raphael-2.1.0-min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/ico-es5-json2-min.js" type="text/javascript" charset="utf-8"></script>    
-    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
+    <link rel="stylesheet" href="style.css" type="text/css"/>
   </head>
 
   <body>
 
     <h1>Grapher thing</h1>
 
+    <!-- removed by beginning of JS -->
+    <p id="hideme1">
+      Sorry, it seems your browser does not support javascript?  Is it
+      simply disabled?
+    </p>
+
+    <!-- removed if the API calls we care about are detected -->
+    <p id="hideme2">
+      Sorry, it seems your browser does not support the functionality
+      being used here.  Please try
+      with <a href="http://www.mozilla.org/firefox/">Firefox</a> or
+      something.
+    </p>
+
     <dl class="info">
       <dt>Battery information</dt>
-      <dd><span id="bat_status"/></dd>
+      <dd><span id="bat_status">x</span></dd>
 
       <dt>Battery Status</dt>
       <dd><span id="bat_latest"/>[Loading...]</dd>
@@ -28,26 +41,9 @@
 
     </dl>
 
-<!--
-    <canvas id="batteryGraph" width="100" height="200">
-      Sorry, your browser does not support
-      the <a href="http://en.wikipedia.org/wiki/HTML5">HTML5</a> <a href="http://en.wikipedia.org/wiki/Canvas_element">canvas
-        element</a>.
-    </canvas>
--->
+    <div id="battery_gauge" class="gauge"></div>
 
-    <div class="graphContainer">
-      <div>Battery charge: <span id="battery-bullet" class="bulletgraph"/></div>
-        
-      <div id="battery-sparkline" class="sparkline"/>
-
-      <!-- <div id="bulletgraph0"></div> -->
-      A bullet graph:<span id="bulletgraph0" class="bulletgraph"></span>.
-      <div class="clear"/>
-      <div id="graph0" class="rightGraph"></div>
-    </div>
-
-    <script src="graphit.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="graphit.js" charset="utf-8"></script>
 
   </body>
 </html>
