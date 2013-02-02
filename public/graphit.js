@@ -26,12 +26,14 @@ function updateGraphs() {
 
 function updateInfo()
 {
-    
+    batteryInfoArray.push([new Date(), battery.charging, battery.level, battery.chargingTime, battery.dischargingTime]);
+
     document.getElementById("bat_latest").innerHTML =
         "charging: " + battery.charging
         + ", level: " + battery.level
         + ", charging time: " + battery.chargingTime
-        + ", discharging time: " + battery.dischargingTime;
+        + ", discharging time: " + battery.dischargingTime
+        + ", log: " + batteryInfoArray;
     document.getElementById("con_latest").innerHTML =
         "bandwidth (MB/s): " + connection.bandwidth
         + ", metered: " + connection.metered;
