@@ -1,3 +1,12 @@
-.info {
+.debug {
+    display: none;
     border: 1px solid black;
+}
+
+.wrapper {
+    clear: both;
+}
+
+.graph {
+    float: left;
 }

@@ -10,7 +10,7 @@
 
   <body>
 
-    <h1>Grapher thing</h1>
+    <h1>Device Information Grapher</h1>
 
     <!-- removed by beginning of JS -->
     <p id="hideme1">
@@ -26,7 +26,7 @@
       something.
     </p>
 
-    <dl class="info">
+    <dl class="debug">
       <dt>Battery information</dt>
       <dd><span id="bat_status">x</span></dd>
 
@@ -38,10 +38,18 @@
 
       <dt>Connection Status</dt>
       <dd><span id="con_latest">[Loading...]</dd>
-
     </dl>
 
-    <div id="battery_gauge" class="gauge"></div>
+    <div id="battery-wrapper" class="wrapper">
+      <div class="graph">
+        <span id="battery_gauge"/>
+        Gauge loading...
+      </div>
+      <div class="graph">
+        <span id="battery_line"/>
+        Line chart loading...
+      </div>
+    </div>
 
     <script type="text/javascript" src="graphit.js" charset="utf-8"></script>
 
